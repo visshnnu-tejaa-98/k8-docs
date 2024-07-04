@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-np-kubetrain
+spec:
+  selector:
+    app: label-kubetrain
+  type: NodePort
+  ports:
+    - name: port-np-kubetrain
+      port: 8080
+      targetPort: 80
